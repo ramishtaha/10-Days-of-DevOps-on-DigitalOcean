@@ -1,0 +1,14 @@
+{
+  "name": "dockerized-node-app",
+  "version": "1.0.0",
+  "description": "A simple Node.js app to demonstrate Docker containerization",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "DevOps Learner",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
