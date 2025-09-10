@@ -86,13 +86,7 @@ server {
     
     # Handle 404 errors gracefully
     error_page 404 /404.html;
-    location = /404.html {
-        internal;
-    }
     
     # Handle 50x errors gracefully
     error_page 500 502 503 504 /50x.html;
-    location = /50x.html {
-        internal;
-    }
 }

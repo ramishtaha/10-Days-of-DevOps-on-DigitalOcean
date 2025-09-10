@@ -187,15 +187,21 @@ In this project, you'll learn the fundamentals of cloud infrastructure by manual
 
 4. **Add Your HTML Content** (copy the content from the provided `index.html` file)
 
-5. **Create Additional Pages**
+6. **Create Additional Pages**
    ```bash
    # Create an about page
    nano about.html
    ```
 
-6. **Create a CSS File**
+7. **Create a CSS File**
    ```bash
    nano styles.css
+   ```
+
+8. **Create Error Pages**
+   ```bash
+   # Create a 404 error page
+   nano 404.html
    ```
 
 ### Step 8: Set Proper Permissions
@@ -296,11 +302,17 @@ In this project, you'll learn the fundamentals of cloud infrastructure by manual
    - Check UFW firewall: `ufw status`
    - Confirm port 80 is open: `ss -tuln | grep :80`
 
-3. **Permission denied errors**
+3. **About.html giving 404 errors**
+   - Ensure the file exists: `ls -la /var/www/html/about.html`
+   - Check file permissions: `chmod 644 /var/www/html/about.html`
+   - Verify Nginx configuration: `nginx -t`
+   - Check Nginx error logs: `tail /var/log/nginx/error.log`
+
+4. **Permission denied errors**
    - Check file ownership: `ls -la /var/www/html/`
    - Fix permissions: `chown -R www-data:www-data /var/www/html`
 
-4. **Nginx configuration errors**
+5. **Nginx configuration errors**
    - Test configuration: `nginx -t`
    - Check syntax in configuration files
    - Review error logs: `tail /var/log/nginx/error.log`
